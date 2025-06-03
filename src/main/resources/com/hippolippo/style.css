@@ -1,0 +1,49 @@
+.button{
+    -fx-font-family: 'Arial Rounded MT Bold', 'Apple Color Emoji';
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+}
+
+.flag{
+    -fx-background-image: url('flag.png'); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+#number-1{
+    -fx-text-fill: blue;
+}
+
+#number-2{
+    -fx-text-fill: red;
+}
+
+#number-3{
+    -fx-text-fill: green;
+}
+
+#number-4{
+    -fx-text-fill: yellow;
+}
+
+#number-5{
+    -fx-text-fill: orange;
+}
+
+#number-6{
+    -fx-text-fill: purple;
+}
+
+.button.pressed{
+    -fx-color: white;
+    /* -fx-border-color: black;
+    -fx-border-insets: 1px;
+    -fx-border-width: 2px; */
+    -fx-border-radius: 0px;
+    /* -fx-border-style: "bevel"; */
+}

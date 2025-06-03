@@ -1,11 +1,12 @@
 .button{
-    -fx-font-family: 'Arial Rounded MT Bold', 'Apple Color Emoji';
+    -fx-font-family: 'Arial Rounded MT Bold';
     -fx-font-size: 20;
     -fx-font-weight: bold;
     -fx-min-width: 40;
     -fx-min-height: 40;
     -fx-max-width: 40;
     -fx-max-height: 40;
+    -fx-color: rgb(226, 240, 252);
 }
 
 .flag{
@@ -13,6 +14,27 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
     -fx-background-position: center center;
+}
+
+.bombs{
+    -fx-font-family: 'Arial Rounded MT Bold';
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(0, 0, 0);
+}
+
+.mine{
+    -fx-background-image: url('mine.png'); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.status{
+    -fx-font-family: 'Arial Rounded MT Bold';
+    -fx-font-size: 50;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(115, 87, 214);
 }
 
 #number-1{
@@ -28,7 +50,7 @@
 }
 
 #number-4{
-    -fx-text-fill: yellow;
+    -fx-text-fill: rgb(214, 214, 5);
 }
 
 #number-5{
@@ -37,6 +59,14 @@
 
 #number-6{
     -fx-text-fill: purple;
+}
+
+#number-7{
+    -fx-text-fill: rgb(221, 0, 255);
+}
+
+#number-8{
+    -fx-text-fill: rgb(147, 0, 81);
 }
 
 .button.pressed{

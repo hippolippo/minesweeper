@@ -12,7 +12,7 @@ public class Board{
         private Board board;
         private int number;
 
-        public Tile(int x, int y, Board board){
+        private Tile(int x, int y, Board board){
             this.x = x;
             this.y = y;
             this.board = board;
@@ -81,6 +81,7 @@ public class Board{
     private int width;
     private int height;
     private int numMines;
+    private LinkedList<Tile> mines;
     private int revealed = 0;
     private boolean revealedBomb = false;
 
@@ -88,6 +89,7 @@ public class Board{
         this.width = width;
         this.height = height;
         this.numMines = numMines;
+        mines = new LinkedList<Tile>();
     }
 
     public Tile move(int x, int y){
@@ -99,11 +101,17 @@ public class Board{
             return tile;
         }
         tile.reveal();
+        if(tile._isMine()){
+            revealedBomb = true;
+        }
         revealed++;
         return tile;
     }
 
     public Tile getTile(int x, int y){
+        if(board == null){
+            return new Tile(-1, -1, null);
+        }
         return board[x][y];
     }
 
@@ -151,6 +159,7 @@ public class Board{
             }
             else{
                 board[x][y].makeMine();
+                mines.add(board[x][y]);
             }
         }
     }
@@ -166,6 +175,10 @@ public class Board{
             }
         }
         return neighbors;
+    }
+
+    public LinkedList<Tile> getMines(){
+        return mines;
     }
 
     public static void main(String[] args){
